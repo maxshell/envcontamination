@@ -1,0 +1,419 @@
+/* DEFAULTS
+----------------------------------------------------------*/
+
+body   
+{
+    /*background: #b6b7bc;*/
+    background: #EEE;
+    font-size: .80em;
+    font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: #696969;
+}
+
+a:link, a:visited
+{
+    color: #034af3;
+}
+
+a:hover
+{
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #034af3;
+}
+
+p
+{
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: #666666;
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+}
+
+h1
+{
+    font-size: 1.6em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+h2
+{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+h3
+{
+    font-size: 1.2em;
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0px;
+}
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.page
+{
+    width: 960px;
+    background-color: #fff;
+    margin: 20px auto 0px auto;
+    /*border: 1px solid #496077;*/
+    border: 1px solid #CCC;
+}
+
+.header
+{
+    position: relative;
+    margin: 0px;
+    padding: 0px;  
+    width: 100%;
+    
+    /* background: #4b6c9e;*/
+    background: #405A6A;
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#839ba9',endColorstr='#405a6a');
+    background: -webkit-gradient(linear,left top,left bottom,from(#839BA9),to(#405A6A));
+    background: -moz-linear-gradient(top,#839BA9,#405A6A);
+    
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 0;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.header h1
+{
+    font-weight: 700;
+    margin: 0px;
+    padding: 0px 0px 0px 20px;
+    color: #f9f9f9;
+    border: none;
+    line-height: 2em;
+    font-size: 2em;
+}
+
+.main
+{
+    padding: 0px 12px;
+    margin: 12px 8px 8px 8px;
+    min-height: 420px;
+}
+
+.leftCol
+{
+    padding: 6px 0px;
+    margin: 12px 8px 8px 8px;
+    width: 200px;
+    min-height: 200px;
+}
+
+.footer
+{
+    color: #4e5766;
+    padding: 8px 0px 0px 0px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: normal;
+}
+
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+div.hideSkiplink
+{
+    width:100%;
+    
+    /*background-color:#3a4f63;*/
+    background-color: #FAFAFA;
+    background-image: -moz-linear-gradient(#FAFAFA,#EAEAEA);
+    background-image: -webkit-linear-gradient(#FAFAFA,#EAEAEA);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa',endColorstr='#eaeaea')";
+}
+
+div.menu
+{
+    padding: 4px 0px 4px 8px;
+}
+
+div.menu ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+}
+
+div.menu ul li a, div.menu ul li a:visited
+{
+    background-color: #465c71;
+    border: 1px #4e667d solid;
+    color: #dde4ec;
+    display: block;
+    line-height: 1.35em;
+    padding: 4px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+div.menu ul li a:hover
+{
+    background-color: #bfcbd6;
+    color: #465c71;
+    text-decoration: none;
+}
+
+div.menu ul li a:active
+{
+    background-color: #465c71;
+    color: #cfdbe6;
+    text-decoration: none;
+}
+
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset
+{
+    margin: 1em 0px;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+fieldset p 
+{
+    margin: 2px 12px 10px 10px;
+}
+
+fieldset.login label, fieldset.register label, fieldset.changePassword label
+{
+    display: block;
+}
+
+fieldset label.inline 
+{
+    display: inline;
+}
+
+legend 
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input.textEntry 
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+input.passwordEntry 
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+div.accountInfo
+{
+    width: 42%;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+
+.clear
+{
+    clear: both;
+}
+
+.title
+{
+    display: block;
+    float: left;
+    text-align: left;
+    width: auto;
+}
+
+.loginDisplay
+{
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    padding: 10px;
+    color: White;
+}
+
+.loginDisplay a:link
+{
+    color: white;
+}
+
+.loginDisplay a:visited
+{
+    color: white;
+}
+
+.loginDisplay a:hover
+{
+    color: white;
+}
+
+.failureNotification
+{
+    font-size: 1.2em;
+    color: Red;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.submitButton
+{
+    text-align: right;
+    padding-right: 10px;
+}
+
+/* CUSTOM  
+----------------------------------------------------------*/
+.geo
+{
+    height:450px;
+    width:600px;
+    float:left;
+    margin-bottom:12px;
+}
+
+.sidebar
+{
+    height:450px;
+    width:300px;
+    float:right;
+}
+
+.visible {
+    display:block;
+}
+
+.invisible {
+    display:none;
+}
+
+.geo-message {
+    color:red;
+    font-size:0.9em;
+}
+
+#finalZone {
+    color:red;
+}
+
+.languagesBar {
+    padding: 0px 0px 0px 20px;
+}
+
+#azimuth {
+  color: #1C94C4;
+  margin-left: 10px;
+}
+
+#azimuth-wrapper {
+  margin-top: 10px; 
+  margin-bottom: 12px;
+}
+
+#slider {
+  margin-top: 5px;
+}
+
+.left {
+  float:left;
+}
+
+.right {
+  float:right;
+}
+
+.inputs {
+  width:60px;
+  height:13px;
+}
+
+#accordion2 select, #accordion2 input {
+  border: 0px solid #EDEDED;
+  outline: 0px;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  color: #666;
+  -webkit-appearance: none;
+  outline-offset: -2px;
+  box-sizing: border-box;
+  -webkit-box-align: center;
+  white-space: pre;
+  letter-spacing: normal;
+  word-spacing: normal;
+  line-height: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  padding-left:0;
+}
+
+#accordion2 label {
+  margin-top: 2px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.center {
+  margin-left:auto;
+  margin-right:auto;
+  width:70%;
+}
+
+#resultsPanelClose {
+  color:red;
+  position:relative;
+  float:right;
+  cursor:pointer;
+}

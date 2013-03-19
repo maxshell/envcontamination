@@ -1,0 +1,150 @@
+{% extends "contamination/headerfooter.html" %}
+{% load i18n %}
+{% block sidebar %}
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">{% trans "Set map" %}</a></li>
+    <li><a href="#tabs-2">{% trans "Calculate" %}</a></li>
+  </ul>
+  <div id="tabs-1">
+    <div id="accordion1">
+      <h6><a href="#">{% trans "By address" %}</a></h6>
+      <div>
+        <input id="address" name="address" type="text" 
+               placeholder='{% trans "Kyiv, Ukraine" %}' />
+        <button id="address-button" type="button">{% trans "Set" %}</button>
+      </div>
+      <h6><a href="#">{% trans "By coordinates" %}</a></h6>
+      <div>
+        <label for="latitude">{% trans "Latitude:" %}</label>
+        <input id="latitude" name="latitude" type="text" placeholder="50.00" />
+        <label for="longtitude">{% trans "Longtitude:" %}</label>
+        <input id="longtitude" name="longtitude" type="text" placeholder="50.00" />
+        <button id="latlng-button" type="button">{% trans "Set" %}</button>
+      </div>
+      <h6><a href="#">{% trans "By geolocation" %}</a></h6>
+      <div>
+        <button id="geo-button" type="button">{% trans "Set" %}</button>
+      </div>
+    </div>
+    <!-- Geolocation messages panel -->
+    <div id="geo-messages-panel">
+      <h3 class="ui-widget-header ui-corner-all">
+        {% trans "Map requesting results:" %}
+      </h3>
+      <div class="ui-widget-content ui-corner-all">
+        <div id="geo-support" class="invisible">
+          {% trans "Your browser doesn't support geolocation." %}
+        </div>
+        <div id="geo-error" class="invisible">
+          {% trans "Cannot determine your location." %}
+        </div>
+        <div id="geocoding-error" class="invisible">
+          {% trans "Geocoding was not successful." %}
+        </div>
+        <div id="geo-message-holder" class="geo-message"></div>
+      </div>
+    </div>
+
+  </div>
+  <div id="tabs-2">
+    <div id="accordion2">
+      <h4><a href="#">{% trans "Define conditions" %}</a></h4>
+      <div>
+        <div>
+          <label for="substances">{% trans "Substance:" %}</label><br/>
+          <select id="substances" name="substances" required="" 
+            size="1" data-bind="value: sub_sel">
+            <option value="-1">{% trans "Select the substance" %}</option>
+            {% for substance in substances %}
+              {% if language == "ru" %} 
+                <option value="{{ substance.id }}">{{ substance.name_ru }}</option>
+              {% else %}
+                {% if language == "uk" %}
+                  <option value="{{ substance.id }}">{{ substance.name_uk }}</option>
+                {% else %}
+                  <option value="{{ substance.id }}">{{ substance.name }}</option>
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+          </select>
+        </div>
+        <div>
+          <label for="dvss">{% trans "Vertical stability of air:" %}</label><br/>
+          <select id="dvss" name="dvss" required="" 
+            size="1" data-bind="value: dvs_sel">
+            <option value="-1">{% trans "Select" %}</option>
+            {% for dvs in dvss reversed %} 
+              {% if language == "ru" %} 
+                <option value="{{ dvs.id }}">{{ dvs.name_ru }}</option>
+              {% else %}
+                {% if language == "uk" %}
+                  <option value="{{ dvs.id }}">{{ dvs.name_uk }}</option>
+                {% else %}
+                  <option value="{{ dvs.id }}">{{ dvs.name }}</option>
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+          </select>
+        </div>
+        <div>
+          <label for="winds">{% trans "Speed of wind, m/s:" %}</label>
+          <select id="winds" name="winds" required="" 
+            size="1" class="right inputs" data-bind="value: w_sel">
+            <option value="-1">{% trans "Select" %}</option>
+            {% for wind in winds%} 
+              <option value="{{ wind.speed|floatformat }}">{{ wind.speed|floatformat }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div>
+          <label for="temperatures">{% trans "Temperature,&#176;C:" %}</label>
+          <select id="temperatures" name="temperatures" required="" 
+            size="1" class="right inputs" data-bind="value: t_sel">
+            <option value="-1">{% trans "Select" %}</option>
+            {% for temperature in temperatures reversed %} 
+              <option value="{{ temperature.value }}">{{ temperature.value }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div>
+          <label for="mass">{% trans "Mass of substance, t:" %}</label>
+          <input id="mass" name="mass" type="text" maxlength="4" size="4" 
+                 placeholder="20" class="right inputs" 
+                 data-bind="value: mass, valueUpdate: 'afterkeydown'" />
+        </div>	
+        <div class="clear">
+          <div id="azimuth-wrapper" class="left">
+            <div>
+              <label for="azimuth">{% trans "Azimuth of the wind: " %}</label>
+              <span id="azimuth">0</span>
+            </div>
+            <div id="slider"></div>
+          </div>
+          <div class="right"><img id="arrow" src="/static/img/N.png"/></div>
+        </div>
+
+        <div class="center">
+          <button id="calculate-button" type="button"
+            data-bind="enable: sub_sel() != '-1' && dvs_sel() != '-1' && 
+              w_sel() != '-1' && t_sel() != '-1' && 
+              parseInt(mass()) > 0 && parseInt(mass()) <= 9999">
+            {% trans "Calculate" %}
+          </button>
+        </div>
+
+        <div id="resultsPanel">
+          <h3 class="ui-widget-header ui-corner-all">{% trans "Results" %}<span id="resultsPanelClose">X</span></h3>
+          <div class="ui-widget-content ui-corner-all">
+	          <div>{% trans "1 hour: " %}<span id="firstZone"></span>{% trans " meters" %}</div>
+	          <div>{% trans "6 hours: " %}<span id="secondZone"></span>{% trans " meters" %}</div>
+	          <div>{% trans "Final zone: " %}<span id="finalZone"></span>{% trans " meters" %}</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+

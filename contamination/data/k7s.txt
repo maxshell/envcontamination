@@ -1,0 +1,105 @@
+Ammonia under pressure	-40	0	0.9
+Ammonia isothermal	-40	0	0.9
+Hydrogen fluoride	-40	0.1	0.1
+Hydrogen chloride	-40	0.4	1
+Dimethylamine	-40	0	0.1
+Acrylonitrile	-40	0.04	0.04
+Oxides of nitrogen	-40	0	0
+Sulfur dioxide	-40	0	0.2
+Ethylene oxide	-40	0	0.1
+Hydrogen sulfide	-40	0.3	1
+Formaldehyde	-40	0	0.4
+Phosgene	-40	0	0.1
+Fluorine	-40	0.7	1
+Phosphorus trichloride	-40	0.1	0.1
+Phosphorus oxychloride	-40	0.05	0.05
+Chlorine	-40	0	0.9
+Vomiting gas	-40	0.03	0.03
+Cyanogen	-40	0	0
+Etilenamin	-40	0.05	0.05
+Ethylene sulfide	-40	0.05	0.05
+Ethyl mercaptan	-40	0.1	0.1
+Ammonia under pressure	-20	0.3	1
+Ammonia isothermal	-20	1	1
+Hydrogen fluoride	-20	0.2	0.2
+Hydrogen chloride	-20	0.6	1
+Dimethylamine	-20	0	0.3
+Acrylonitrile	-20	0.1	0.1
+Oxides of nitrogen	-20	0	0
+Sulfur dioxide	-20	0	0.5
+Ethylene oxide	-20	0	0.3
+Hydrogen sulfide	-20	0.5	1
+Formaldehyde	-20	0	1
+Phosgene	-20	0	0.3
+Fluorine	-20	0.8	1
+Phosphorus trichloride	-20	0.2	0.2
+Phosphorus oxychloride	-20	0.1	0.1
+Chlorine	-20	0.3	1
+Vomiting gas	-20	0.1	0.1
+Cyanogen	-20	0	0
+Etilenamin	-20	0.1	0.1
+Ethylene sulfide	-20	0.1	0.1
+Ethyl mercaptan	-20	0.2	0.2
+Ammonia under pressure	0	0.6	1
+Ammonia isothermal	0	1	1
+Hydrogen fluoride	0	0.5	0.5
+Hydrogen chloride	0	0.8	1
+Dimethylamine	0	0	0.8
+Acrylonitrile	0	0.4	0.4
+Oxides of nitrogen	0	0.4	0.4
+Sulfur dioxide	0	0.3	1
+Ethylene oxide	0	0	0.7
+Hydrogen sulfide	0	0.8	1
+Formaldehyde	0	0.5	1
+Phosgene	0	0	0.7
+Fluorine	0	0.9	1
+Phosphorus trichloride	0	0.4	0.4
+Phosphorus oxychloride	0	0.3	0.3
+Chlorine	0	0.6	1
+Vomiting gas	0	0.3	0.3
+Cyanogen	0	0	0.6
+Etilenamin	0	0.4	0.4
+Ethylene sulfide	0	0.4	0.4
+Ethyl mercaptan	0	0.5	0.5
+Ammonia under pressure	20	1	1
+Ammonia isothermal	20	1	1
+Hydrogen fluoride	20	1	1
+Hydrogen chloride	20	1	1
+Dimethylamine	20	1	1
+Acrylonitrile	20	1	1
+Oxides of nitrogen	20	1	1
+Sulfur dioxide	20	1	1
+Ethylene oxide	20	1	1
+Hydrogen sulfide	20	1	1
+Formaldehyde	20	1	1
+Phosgene	20	1	1
+Fluorine	20	1	1
+Phosphorus trichloride	20	1	1
+Phosphorus oxychloride	20	1	1
+Chlorine	20	1	1
+Vomiting gas	20	1	1
+Cyanogen	20	1	1
+Etilenamin	20	1	1
+Ethylene sulfide	20	1	1
+Ethyl mercaptan	20	1	1
+Ammonia under pressure	40	1.4	1
+Ammonia isothermal	40	1	1
+Hydrogen fluoride	40	1	1
+Hydrogen chloride	40	1.2	1
+Dimethylamine	40	2.5	1
+Acrylonitrile	40	2.4	2.4
+Oxides of nitrogen	40	1	1
+Sulfur dioxide	40	1.7	1
+Ethylene oxide	40	3.2	1
+Hydrogen sulfide	40	1.2	1
+Formaldehyde	40	1.5	1
+Phosgene	40	2.7	1
+Fluorine	40	1.1	1
+Phosphorus trichloride	40	2.3	2.3
+Phosphorus oxychloride	40	2.5	2.5
+Chlorine	40	1.4	1
+Vomiting gas	40	2.9	2.9
+Cyanogen	40	3.9	1
+Etilenamin	40	2.2	2.2
+Ethylene sulfide	40	2.2	2.2
+Ethyl mercaptan	40	1	1

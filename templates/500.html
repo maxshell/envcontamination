@@ -1,0 +1,22 @@
+{% extends "contamination/base.html" %}
+{% load i18n %}
+
+{% block title %}
+  {% trans "Server error (500)" %}
+{% endblock %}
+
+{% block header %}
+  <div class="title">
+    <h1>
+      {% trans "Server error (500)" %}
+    </h1>
+  </div>
+  <div class="clear"></div>
+{% endblock %}
+
+{% block main %}
+  <h2>
+    {% trans "There's been an error. It's been reported to the site administrators via e-mail and should be fixed shortly. Thanks for your patience." %}
+  </h2>
+  <div><a href="/">{% trans "Home" %}</a></div>
+{% endblock %}
